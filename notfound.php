@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
-    <link rel="stylesheet" href="styles/base.css">
-    <title>ElectrAA</title>
+    <title>Document</title>
 </head>
-<body>    
-
-
-
+<body>
+    <h1>404 not page found</h1>
+    <h2><?= $error_message ?></h2>
 </body>
 </html>

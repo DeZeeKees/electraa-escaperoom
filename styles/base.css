@@ -19,9 +19,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    display: flex;
     background-color: var(--BackgroundColor);
     height: 100vh;
+}
+
+body.flex {
+    display: flex;
     justify-content: center;
 }
 
