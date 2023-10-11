@@ -17,20 +17,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
-    <link rel="stylesheet" href="../styles/base.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../styles/admin.css">
+    <script async type="module" src="../js/admin.js" defer></script>
     <title>ElectrAA</title>
 </head>
 <body>    
+    <main>
 
-    <h1>admin page</h1>
-    
+        <div class="head">
 
-    <?php foreach($db->listNumbers() as $record): ?>
+            <a href="/">
+                <div class="title">
+                    <h1 class="mainTitle">ELECTR<span class="accent">AA</span></h1>
+                    <h2 class="subTitle">Admin Pagina</h2>
+                </div>
+            </a>
 
-        <p><?= $record["number"] ?></p>
-        <br>
+            <button onclick="openCreatePopup()">Maak nieuw</button>
 
-    <?php endforeach; ?>
+        </div>
+
+        <div class="table">
+
+            <div class="tableHead">
+                <div class="tableRow">
+                    <div class="col Name">Naam</div>
+                    <div class="col Number">Nummer</div>
+                    <div class="col Active">Video</div>
+                    <div class="col Action">Actie</div>
+                </div>
+            </div>
+
+            <div class="tableBody">
+                <?php 
+                    foreach($db->listNumbers() as $number) {
+                        renderAdminItem($number);
+                    }
+                ?>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="background hidden" id="editNumberPopup">
+        <div>
+            <form id="editNumberForm" hx-post="../php/edit_admin_item.php">
+                <label for="name">code naam</label>
+                <input id="editNumberName"type="text" name="name" placeholder="vull hier de naam van de code in">
+                <label for="number">code</label>
+                <input id="editNumberNumber" type="number" name="number" placeholder="vull hier de code in">
+                <label for="video">video</label>
+                <input id="editNumberVideo" type="text" name="video" placeholder="video link">
+                <input id="editNumberId" type="hidden" name="id" value="">
+                <input type="hidden" name="action" value="edit">
+                <div class="buttons">
+                    <button type="submit" onclick="closeEditPopup()">Opslaan</button>
+                    <button type="button" onclick="closeEditPopup()">Sluiten</button>
+                </div>
+            </form>
+        </div>
+    </div>
+ 
+    <div class="background hidden" id="createNumberPopup">
+        <div>
+            <form id="createNumberForm" hx-post="../php/edit_admin_item.php" hx-target=".tableBody" hx-swap="beforeend ">
+                <label for="name">code naam</label>
+                <input id="createNumberName"type="text" name="name" placeholder="vull de naam van de code in">
+                <label for="number">code</label>
+                <input id="createNumberNumber" type="number" name="number" placeholder="vull hier de code in">
+                <label for="video">video</label>
+                <input id="createNumberVideo" type="text" name="video" placeholder="video link">
+                <input type="hidden" name="action" value="create">
+                <div class="buttons">
+                    <button type="submit" onclick="closeCreatePopup(true)">Opslaan</button>
+                    <button type="reset" onclick="closeCreatePopup(false)">Sluiten</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

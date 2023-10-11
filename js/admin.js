@@ -22,6 +22,48 @@ window.loginAdmin = async function loginAdmin(event) {
     window.location.href = result.redirect;
 }
 
+window.openEditPopup = async function(id, name, code, video) {
+    const idElement = document.getElementById('editNumberId')
+    const nameElement = document.getElementById('editNumberName')
+    const numberElement = document.getElementById('editNumberNumber')
+    const popupElement = document.getElementById('editNumberPopup')
+    const popupForm = document.getElementById('editNumberForm')
+    const videoInput = document.getElementById('editNumberVideo')
+    idElement.value = id
+    numberElement.value = code
+    nameElement.value = name
+    videoInput.value = video
+
+    popupForm.setAttribute('hx-target', `#tableItem${id}`)
+    popupElement.classList.toggle("hidden")
+}
+
+window.closeEditPopup = function() {
+    const popupElement = document.getElementById('editNumberPopup')
+    popupElement.classList.toggle("hidden")
+}
+
+
+window.openCreatePopup = async function() {
+    const popupElement = document.getElementById('createNumberPopup')
+    const nameInput = document.getElementById('createNumberName');
+    const numberInput = document.getElementById('createNumberNumber')
+    const videoInput = document.getElementById('createNumberVideo')
+    numberInput.value = ""
+    nameInput.value = ""
+    videoInput.value = ""
+    popupElement.classList.toggle("hidden")
+}
+
+window.closeCreatePopup = function(scroll = true) {
+    const popupElement = document.getElementById('createNumberPopup')
+    const talbleBody = document.querySelector(".tableBody");
+    if(scroll) {
+        talbleBody.scrollTo({behavior: "smooth"}, talbleBody.scrollHeight);
+    }
+    popupElement.classList.toggle("hidden")
+}
+
 if(location.pathname === "/admin/login") {
 
     const params = new URLSearchParams(location.search);

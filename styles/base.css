@@ -1,4 +1,5 @@
 @import url("var.css");
+@import url("keyFrames.css");
 
 @font-face {
     font-family: Judgement;
@@ -28,6 +29,12 @@ body.flex {
     justify-content: center;
 }
 
+body.flex.video {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .hidden {
     opacity: 0;
     position: absolute;
@@ -47,6 +54,7 @@ body.flex {
 }
 
 .mainTitle {
+    position: relative;
     margin: 0;
     color: #fff;
     font-family: var(--Font);
@@ -65,7 +73,6 @@ body.flex {
     color: var(--Gray);
     font-family: var(--Font);
     font-size: 8rem;
-
 }
 
 .swalTitle {
@@ -112,5 +119,121 @@ form button {
     font-weight: bolder;
     max-width: 30rem;
     width: 80%;
+}
+
+img {
+    position: absolute;
+    transition-duration: 0.5s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#lighning1 {
+    transform: rotate(36deg);
+    bottom: 200px;
+    left: 150px;
+    animation-name: lightning1;
+}
+
+#lighning2 {
+    transform: rotate(65deg);
+    bottom: 200px;
+    right: -50px;
+    animation-name: lightning2;
+}
+
+#lighning3 {
+    transform: rotate(119deg);
+    bottom: 10px;
+    right: -240px;
+    animation-name: lightning3;
+}
+
+#lighning4 {
+    transform: rotate(170deg);
+    bottom: -250px;
+    right: -200px;
+    animation-name: lightning4;
+}
+
+#lighning5 {
+    transform: rotate(200deg);
+    bottom: -400px;
+    right: 0;
+    animation-name: lightning5;
+}
+
+#lighning6 {
+    transform: rotate(236deg);
+    bottom: -400px;
+    left: 50px;
+    animation-name: lightning6;
+}
+
+#lighning7 {
+    transform: rotate(271deg);
+    bottom: -200px;
+    left: -175px;
+    animation-name: lightning7;
+}
+
+#lighning8 {
+    transform: rotate(360deg);
+    bottom: 110px;
+    left: -175px;
+    animation-name: lightning8;
+}
+
+iframe {
+    width: 100vw;
+    height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    img {
+        display: none;
+    }
+
+    #lighning1, #lighning2 , #lighning5 , #lighning6 {
+        display: block;
+    }
+
+    #lighning1, #lighning6 {
+        left: 25px;
+    }
+    
+    #lighning2, #lighning5 {
+        right: 25px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    html {
+        font-size: 7px;
+    }
+
+    #lighning1, #lighning6 {
+        left: -10px;
+    }
+    
+    #lighning2, #lighning5 {
+        right: -10px;
+    }
+
+    #lighning1, #lighning2 {
+        top: -200px;
+    }
+
+    #lighning5, #lighning6 {
+        bottom: -300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 6px;
+    }
 }
 

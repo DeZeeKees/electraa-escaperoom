@@ -1,0 +1,47 @@
+@keyframes lightning1 {
+    0% {transform: rotate(33deg)}
+    50% {transform: rotate(38deg)}
+    100% {transform: rotate(33deg)}
+  }
+
+@keyframes lightning2 {
+    0% {transform: rotate(62deg)}
+    50% {transform: rotate(68deg)}
+    100% {transform: rotate(62deg)}
+  }
+
+@keyframes lightning3 {
+    0% {transform: rotate(116deg)}
+    50% {transform: rotate(121deg)}
+    100% {transform: rotate(116deg)}
+  }
+
+@keyframes lightning4 {
+    0% {transform: rotate(167deg)}
+    50% {transform: rotate(173deg)}
+    100% {transform: rotate(167deg)}
+  }
+
+@keyframes lightning5 {
+    0% {transform: rotate(197deg)}
+    50% {transform: rotate(203deg)}
+    100% {transform: rotate(197deg)}
+  }
+
+@keyframes lightning6 {
+    0% {transform: rotate(233deg)}
+    50% {transform: rotate(239deg)}
+    100% {transform: rotate(233deg)}
+  }
+  
+@keyframes lightning7 {
+    0% {transform: rotate(268deg)}
+    50% {transform: rotate(274deg)}
+    100% {transform: rotate(268deg)}
+  }
+
+@keyframes lightning8 {
+    0% {transform: rotate(357deg)}
+    50% {transform: rotate(363deg)}
+    100% {transform: rotate(357deg)}
+  }

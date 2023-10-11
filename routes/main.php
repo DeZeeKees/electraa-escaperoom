@@ -13,7 +13,18 @@
     
     <main class="indexMain">
 
-        <h1 class="mainTitle">ELECTR<span class="accent">AA</span></h1>
+        <h1 class="mainTitle">ELECTR<span class="accent">AA</span>
+
+        <img src="../static/img/bliksem.png" alt="" id="lighning1">
+        <img src="../static/img/bliksem.png" alt="" id="lighning2">
+        <img src="../static/img/bliksem.png" alt="" id="lighning3">
+        <img src="../static/img/bliksem.png" alt="" id="lighning4">
+        <img src="../static/img/bliksem.png" alt="" id="lighning5">
+        <img src="../static/img/bliksem.png" alt="" id="lighning6">
+        <img src="../static/img/bliksem.png" alt="" id="lighning7">
+        <img src="../static/img/bliksem.png" alt="" id="lighning8">
+        
+        </h1>
         <h2 class="subTitle">ESCAPEROOM</h2>
             
         <form id="numberForm" onsubmit={numberFormSubmit(event)}>
@@ -22,6 +33,8 @@
                 onkeypress={formLimits(event)}
                 maxlength = "8"
                 placeholder="voer hier je code in"
+                name="number"
+                id="number"
             >
 
             <button type="submit">Antwoord opgeven</button>
