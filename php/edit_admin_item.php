@@ -29,7 +29,7 @@ switch($_POST['action']) {
             $image_type = exif_imagetype($image['tmp_name']);
             $image_name = "image not uploaded";
 
-            if ($image_type == IMAGETYPE_PNG || $image_type == IMAGETYPE_JPEG) {
+            if ($image_type == IMAGETYPE_PNG || $image_type == IMAGETYPE_JPEG || $image_type == IMAGETYPE_GIF) {
                 $image_name = substr(uniqid('', true), -5) . "-" .  $image['name'];
                 move_uploaded_file($image['tmp_name'], "../static/img/uploads/" . $image_name);
             }
@@ -57,7 +57,7 @@ switch($_POST['action']) {
         $image_type = exif_imagetype($image['tmp_name']);
         $image_name = "image not uploaded";
 
-        if($image_type == IMAGETYPE_PNG || $image_type == IMAGETYPE_JPEG) {
+        if($image_type == IMAGETYPE_PNG || $image_type == IMAGETYPE_JPEG || $image_type == IMAGETYPE_GIF) {
            $image_name = substr(uniqid('', true), -5) . "-" .  $image['name'];
            move_uploaded_file($image['tmp_name'], "../static/img/uploads/" . $image_name);
         }

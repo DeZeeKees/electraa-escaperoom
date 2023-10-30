@@ -77,3 +77,7 @@ if(location.pathname === "/admin/login") {
         history.pushState({}, document.title, location.pathname)
     }
 }
+
+window.formLimits = function formLimits(event) {
+    if(event.target.value.length >= 8) event.preventDefault()
+}
