@@ -8,7 +8,7 @@ $router = new Router(__DIR__);
 $router->define_route("/", "main.php");
 $router->define_route("", "main.php");
 
-$router->define_route("/video", "video_page.php");
+$router->define_route("/image", "image_page.php");
 
 $router->define_route("/admin", "admin.php");
 $router->define_route("/admin/login", "login.php");

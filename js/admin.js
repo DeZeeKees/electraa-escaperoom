@@ -22,17 +22,17 @@ window.loginAdmin = async function loginAdmin(event) {
     window.location.href = result.redirect;
 }
 
-window.openEditPopup = async function(id, name, code, video) {
+window.openEditPopup = async function(id, name, code, image) {
     const idElement = document.getElementById('editNumberId')
     const nameElement = document.getElementById('editNumberName')
     const numberElement = document.getElementById('editNumberNumber')
     const popupElement = document.getElementById('editNumberPopup')
     const popupForm = document.getElementById('editNumberForm')
-    const videoInput = document.getElementById('editNumberVideo')
+    const imageInput = document.getElementById('editNumberImg')
     idElement.value = id
     numberElement.value = code
     nameElement.value = name
-    videoInput.value = video
+    imageInput.value = image
 
     popupForm.setAttribute('hx-target', `#tableItem${id}`)
     popupElement.classList.toggle("hidden")
@@ -48,10 +48,10 @@ window.openCreatePopup = async function() {
     const popupElement = document.getElementById('createNumberPopup')
     const nameInput = document.getElementById('createNumberName');
     const numberInput = document.getElementById('createNumberNumber')
-    const videoInput = document.getElementById('createNumberVideo')
+    const imageInput = document.getElementById('createNumberImg')
     numberInput.value = ""
     nameInput.value = ""
-    videoInput.value = ""
+    imageInput.value = ""
     popupElement.classList.toggle("hidden")
 }
 

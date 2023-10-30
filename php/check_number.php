@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] != "POST") {
     exit();
 }
 
-$db = new Database("localhost", "electraa");
+$db = new Database();
 $form = $_POST;
 
 $result = $db->checkNumber($form['number']);

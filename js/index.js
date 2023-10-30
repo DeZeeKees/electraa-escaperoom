@@ -25,7 +25,7 @@ window.numberFormSubmit = async function numberFormSubmit(event) {
 
     correctCode.fire({
         didClose: async () => {
-            location.href = `/video?redirect=true&id=${request.id}`
+            location.href = `/image?redirect=true&id=${request.id}`
         }
     });
 }

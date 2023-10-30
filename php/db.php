@@ -7,7 +7,9 @@ class Database {
 
     private $db;
 
-    public function __construct(string $host, string $db) {
+    public function __construct() {
+        $host = "localhost";
+        $db = "electraa-ict";
         
         $options = [
             \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
@@ -40,8 +42,8 @@ class Database {
         return $data[0];
     }
 
-    public function editNumber(int $id, string $name, int $number, string $video) {
-        $stmt = $this->db->prepare("UPDATE numbers SET name='{$name}', number={$number}, video='{$video}' WHERE id={$id}");
+    public function editNumber(int $id, string $name, int $number, string $image) {
+        $stmt = $this->db->prepare("UPDATE numbers SET name='{$name}', number={$number}, image='{$image}' WHERE id={$id}");
         $stmt->execute();
         $stmt = $this->db->prepare("SELECT * FROM numbers WHERE id=" . $id);
         $stmt->execute();
@@ -54,12 +56,12 @@ class Database {
         $stmt->execute();
     }
 
-    public function createNumber($name, $code, $video) {
+    public function createNumber($name, $code, $image) {
         $active = 1;
-        $stmt = $this->db->prepare(("INSERT INTO numbers (name, number, video, active) VALUES (:name, :number, :video, :active)"));
+        $stmt = $this->db->prepare(("INSERT INTO numbers (name, number, image, active) VALUES (:name, :number, :image, :active)"));
         $stmt->bindParam(":name", $name);
         $stmt->bindParam(":number", $code);
-        $stmt->bindParam(":video", $video);
+        $stmt->bindParam(":image", $image);
         $stmt->bindParam(":active", $active);
         $stmt->execute();
 

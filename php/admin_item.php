@@ -2,7 +2,7 @@
     <div class="tableRow" id="tableItem<?= $number['id'] ?>">
         <div class="col Name"><?= $number['name'] ?></div>
         <div class="col Number"><?= $number['number'] ?></div>
-        <div class="col Active"><a class="videoLink" href="<?= $number['video']?>" target="_blank"><?= $number['video']?></a></div>
+        <div class="col Active"><a class="videoLink" href="/static/img/uploads/<?= $number['image']?>" target="_blank"><?= $number['image']?></a></div>
         <div class="col Action">
 
             <form hx-post="../php/edit_admin_item.php" hx-target="#tableItem<?= $number['id'] ?>">
@@ -15,7 +15,7 @@
                 </button>
             </form>
 
-            <button class="edit" onclick="openEditPopup(<?= $number['id'] ?>, '<?= $number['name'] ?>', <?= $number['number'] ?>, '<?= $number['video'] ?>')">
+            <button class="edit" onclick="openEditPopup(<?= $number['id'] ?>, '<?= $number['name'] ?>', <?= $number['number'] ?>, '')">
                 <span class="material-symbols-outlined">
                     edit
                 </span>

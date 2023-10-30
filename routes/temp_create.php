@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] != "POST") {
 require './db.php';
 require './admin_item.php';
 
-$db = new Database("localhost", "electraa");
+$db = new Database();
 
 switch($_POST['action']) {
     case "toggle";
@@ -19,7 +19,7 @@ switch($_POST['action']) {
         exit;
     break;
     case "edit";
-        $data = $db->editNumber($_POST['id'], $_POST['name'], intval($_POST['number']), $_POST['video']);
+        $data = $db->editNumber($_POST['id'], $_POST['name'], intval($_POST['number']), "");
         print_r(renderAdminItem($data));
         exit;
     break;
@@ -29,8 +29,11 @@ switch($_POST['action']) {
         exit;
     break;
     case "create";
-        $data = $db->createNumber($_POST['name'], intval($_POST['number']), $_POST['video']);
-        print_r(renderAdminItem($data));
+
+        var_dump($_FILES);
+
+        $data = $db->createNumber($_POST['name'], intval($_POST['number']), "");
+        renderAdminItem($data);
         exit;
     break;
 }

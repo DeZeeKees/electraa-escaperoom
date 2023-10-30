@@ -13,19 +13,19 @@
     
     <main class="indexMain">
 
-        <h1 class="mainTitle">ELECTR<span class="accent">AA</span>
+        <h1 class="mainTitle">ICT-<span class="accent">COLLEGE</span>
 
-        <img src="../static/img/bliksem.png" alt="" id="lighning1">
-        <img src="../static/img/bliksem.png" alt="" id="lighning2">
-        <img src="../static/img/bliksem.png" alt="" id="lighning3">
-        <img src="../static/img/bliksem.png" alt="" id="lighning4">
-        <img src="../static/img/bliksem.png" alt="" id="lighning5">
-        <img src="../static/img/bliksem.png" alt="" id="lighning6">
-        <img src="../static/img/bliksem.png" alt="" id="lighning7">
-        <img src="../static/img/bliksem.png" alt="" id="lighning8">
+        <img src="../static/img/bliksem.png" alt="" id="lighning1" class="thunder">
+        <img src="../static/img/bliksem.png" alt="" id="lighning2" class="thunder">
+        <img src="../static/img/bliksem.png" alt="" id="lighning3" class="thunder">
+        <img src="../static/img/bliksem.png" alt="" id="lighning4" class="thunder">
+        <img src="../static/img/bliksem.png" alt="" id="lighning5" class="thunder">
+        <img src="../static/img/bliksem.png" alt="" id="lighning6" class="thunder">
+        <img src="../static/img/bliksem.png" alt="" id="lighning7" class="thunder">
+        <img src="../static/img/bliksem.png" alt="" id="lighning8" class="thunder">
         
         </h1>
-        <h2 class="subTitle">ESCAPEROOM</h2>
+        <h2 class="subTitle">ROC TER-AA</h2>
             
         <form id="numberForm" onsubmit={numberFormSubmit(event)}>
             <input type="number"

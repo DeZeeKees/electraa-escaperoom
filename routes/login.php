@@ -13,7 +13,7 @@
 
     <main class="indexMain">
 
-        <h1 class="mainTitle">ELECTR<span class="accent">AA</span></h1>
+        <h1 class="mainTitle">ICT<span class="accent">COLLEGE</span></h1>
         <h2 class="subTitle">ADMIN PAGINA</h2>
 
         <form method="post" onsubmit={loginAdmin(event)}>

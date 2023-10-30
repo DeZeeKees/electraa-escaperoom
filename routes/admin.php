@@ -7,7 +7,7 @@
         exit();
     }
 
-    $db = new Database("localhost", "electraa");
+    $db = new Database();
 
 ?>
 
@@ -29,7 +29,7 @@
 
             <a href="/">
                 <div class="title">
-                    <h1 class="mainTitle">ELECTR<span class="accent">AA</span></h1>
+                    <h1 class="mainTitle">ICT-<span class="accent">COLLEGE</span></h1>
                     <h2 class="subTitle">Admin Pagina</h2>
                 </div>
             </a>
@@ -44,7 +44,7 @@
                 <div class="tableRow">
                     <div class="col Name">Naam</div>
                     <div class="col Number">Nummer</div>
-                    <div class="col Active">Video</div>
+                    <div class="col Active">image</div>
                     <div class="col Action">Actie</div>
                 </div>
             </div>
@@ -63,13 +63,13 @@
 
     <div class="background hidden" id="editNumberPopup">
         <div>
-            <form id="editNumberForm" hx-post="../php/edit_admin_item.php">
+            <form id="editNumberForm" hx-post="../php/edit_admin_item.php" hx-encoding="multipart/form-data">
                 <label for="name">code naam</label>
                 <input id="editNumberName"type="text" name="name" placeholder="vull hier de naam van de code in">
                 <label for="number">code</label>
                 <input id="editNumberNumber" type="number" name="number" placeholder="vull hier de code in">
-                <label for="video">video</label>
-                <input id="editNumberVideo" type="text" name="video" placeholder="video link">
+                <label for="image">image</label>
+                <input id="editNumberImg" type="file" name="image" accept="image/png, image/jpeg">
                 <input id="editNumberId" type="hidden" name="id" value="">
                 <input type="hidden" name="action" value="edit">
                 <div class="buttons">
@@ -82,13 +82,13 @@
  
     <div class="background hidden" id="createNumberPopup">
         <div>
-            <form id="createNumberForm" hx-post="../php/edit_admin_item.php" hx-target=".tableBody" hx-swap="beforeend ">
+            <form id="createNumberForm" hx-post="../php/edit_admin_item.php" hx-target=".tableBody" hx-swap="beforeend" hx-encoding="multipart/form-data">
                 <label for="name">code naam</label>
                 <input id="createNumberName"type="text" name="name" placeholder="vull de naam van de code in">
                 <label for="number">code</label>
                 <input id="createNumberNumber" type="number" name="number" placeholder="vull hier de code in">
-                <label for="video">video</label>
-                <input id="createNumberVideo" type="text" name="video" placeholder="video link">
+                <label for="image">image</label>
+                <input id="createNumberImg" type="file" name="image" accept="image/png, image/jpeg">
                 <input type="hidden" name="action" value="create">
                 <div class="buttons">
                     <button type="submit" onclick="closeCreatePopup(true)">Opslaan</button>
