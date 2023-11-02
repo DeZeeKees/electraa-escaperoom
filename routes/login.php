@@ -13,8 +13,8 @@
 
     <main class="indexMain">
 
-        <h1 class="mainTitle">ICT<span class="accent">COLLEGE</span></h1>
-        <h2 class="subTitle">ADMIN PAGINA</h2>
+        <h1 class="mainTitle">ICT-<span class="accent">COLLEGE</span></h1>
+        <h2 class="subTitle">ADMIN <span class="accent">PAGINA</span></h2>
 
         <form method="post" onsubmit={loginAdmin(event)}>
             <input type="text" name="adminCode" id="adminCode" placeholder="Admin code">

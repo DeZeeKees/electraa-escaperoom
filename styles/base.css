@@ -56,29 +56,32 @@ body.flex.video img {
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
-
 }
 
 .mainTitle {
     position: relative;
     margin: 0;
-    color: #fff;
+    color: var(--Text);
     font-family: var(--Font);
     font-size: 10.8rem;
     line-height: 10rem;
 }
 
 .mainTitle .accent {
-    color: var(--Yellow);
+    color: var(--Text);
 }
 
 .subTitle {
     margin: 0;
     margin-bottom: 4rem;
     line-height: 7.8rem;
-    color: var(--Gray);
+    color: var(--Roc);
     font-family: var(--Font);
     font-size: 8rem;
+}
+
+.subTitle .accent {
+    color: var(--TerAA);
 }
 
 .swalTitle {

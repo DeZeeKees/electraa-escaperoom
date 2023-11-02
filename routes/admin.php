@@ -30,7 +30,7 @@
             <a href="/">
                 <div class="title">
                     <h1 class="mainTitle">ICT-<span class="accent">COLLEGE</span></h1>
-                    <h2 class="subTitle">Admin Pagina</h2>
+                    <h2 class="subTitle">Admin <span class="accent">PAGINA</span></h2>
                 </div>
             </a>
 

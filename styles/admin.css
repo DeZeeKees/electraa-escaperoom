@@ -68,16 +68,20 @@ main {
 }
 
 .mainTitle .accent {
-    color: var(--Yellow);
+    color: var(--College);
 }
 
 .subTitle {
     margin: 0;
     margin-bottom: 2rem;
-    color: var(--Gray);
+    color: var(--Roc);
     font-family: var(--Font);
     font-size: 3.2rem;
     line-height: 3rem;
+}
+
+.subTitle .accent {
+    color: var(--TerAA);
 }
 
 .table {
